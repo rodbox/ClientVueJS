@@ -1,8 +1,7 @@
 # ClientVueJs - Rodbox
+Connextion api service rodbox
 
-> Connextion api service rodbox
-
-## configuration :
+## Configuration :
 > /src/store.js
 ```
 const state = {
@@ -21,17 +20,27 @@ const state = {
 	}
 ```
 
-## un nouveau composent global :
+## Composent global :
+Instancier : 
 > /src/components.js
 
-## Referencer un module vuex :
-> /src/modules.js
-Les fichiers de composents sont a ranger dans le dossier /src/components
-dans un sous dossier de preferences.
+Emplacement :
+>/src/components/COMPONENT_FOLDER/COMPONENTS.vue
 
-## Referencer une route vue-router :
+
+## Module vuex :
+Instancier :
+> /src/modules.js
+
+Emplacement :
+>/src/components/COMPONENT_FOLDER/MODULE_NAME.jd
+
+## Instancier une route vue-router :
+Instancier :
 > /src/router.js
-Les fichiers de component referencer dans vue router sont a ranger dans le dossier /src/pages/ de preference.
+
+Emplacement :
+> /src/pages/PAGE_COMPONENTS.vue
 
 ## Connextion API
 depuis une methods ou une actions d'un module vuex :
