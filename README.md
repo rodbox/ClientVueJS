@@ -33,7 +33,7 @@ Instancier :
 > /src/modules.js
 
 Emplacement :
->/src/components/COMPONENT_FOLDER/MODULE_NAME.jd
+>/src/components/COMPONENT_FOLDER/MODULE_NAME.js
 
 ## Instancier une route vue-router :
 Instancier :
@@ -43,6 +43,14 @@ Emplacement :
 > /src/pages/PAGE_COMPONENTS.vue
 
 ## Connextion API
+| id         | String   | id service                                                       |
+| name       | String   | index du service Rodbox                                          |
+| cache      | Boolean  | Si le resultat doit est mis dans le localStorage                 |
+| dataSend   | Object   | Objet des données a envoyer                                      |
+| hook       | Array    | Liste des actions a executer sur le serveur apres la requete api |
+| callback   | Function | Callback en cas de succés                                        |
+| beforeSend | Function | Action avant l'envois de la requete    						   |
+                          |
 depuis une methods ou une actions d'un module vuex :
 ```
 window.store.dispatch('getService', {
@@ -50,8 +58,9 @@ window.store.dispatch('getService', {
 	name: ID_SERVICE + '.' + NOM_METHODS,
 	cache: true,
 	dataSend: {
-	DATA_INDEX: DATA_VALUE        
+		DATA_INDEX: DATA_VALUE        
 	},
+	hook: ['rb.trace'],
 	callback (json) {
 	},
 	beforeSend () {
