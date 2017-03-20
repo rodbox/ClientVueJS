@@ -3,7 +3,7 @@
 > Connextion api service rodbox
 
 ## configuration :
-/src/store.js
+> /src/store.js
 ```
 const state = {
 	title: 'TITLE_PROJECT', // ex: Rodbox
@@ -21,7 +21,20 @@ const state = {
 	}
 ```
 
-## exemple de connextion depuis une methods ou une actions d'un module :
+## un nouveau composent global :
+> /src/components.js
+
+## Referencer un module vuex :
+> /src/modules.js
+Les fichiers de composents sont a ranger dans le dossier /src/components
+dans un sous dossier de preferences.
+
+## Referencer une route vue-router :
+> /src/router.js
+Les fichiers de component referencer dans vue router sont a ranger dans le dossier /src/pages/ de preference.
+
+## Connextion API
+depuis une methods ou une actions d'un module vuex :
 ```
 window.store.dispatch('getService', {
 	id: ID_SERVICE,
